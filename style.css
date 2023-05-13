@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+:root {
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-lightgray: hsl(212, 45%, 89%);
+
+  --color-grayvishblue: hsl(220, 15%, 55%);
+
+  --color-darkblue: hsl(218, 44%, 22%);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  color: var(--color-lightgray);
+  display: block;
+  background-color: var(--color-grayvishblue);
+  height: auto;
+}
+
+.area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--color-white);
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 15px 10px 50px var(--color-darkblue);
+}
+
+.heading {
+  font-weight: 700;
+  color: var(--color-darkblue);
+  text-align: justify;
+}
+
+.text{
+  font-weight: 400;
+  color: var(--color-grayvishblue);
+  text-align: justify;
+}
+
+@media (width < 600px){
+  body {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    color: var(--color-lightgray);
+    display: block;
+    background-color: var(--color-grayvishblue);
+    height: auto;
+    font-size: 14px;
+    text-align: justify;
+  }
+  
+  .area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    background-color: var(--color-white);
+    width: 280px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 10px 50px var(--color-darkblue);
+  }
+}
